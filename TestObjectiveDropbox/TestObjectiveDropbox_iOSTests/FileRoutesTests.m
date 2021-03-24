@@ -13,7 +13,6 @@ static NSString *scopesForFileRoutesTests = @"account_info.read files.content.re
     DBUserClient* _userClient;
     DropboxTester *_tester;
     TestData *_testData;
-    BOOL _shouldFail;
 }
 
 - (void)setUp {
