@@ -94,7 +94,7 @@
   }
 
   if ([imagePaths count] > 0) {
-    NSString *imagePathToDownload = imagePaths[arc4random_uniform((int)[imagePaths count] - 1)];
+    NSString *imagePathToDownload = imagePaths[arc4random_uniform((int)[imagePaths count])];
     [self downloadImage:imagePathToDownload];
   } else {
     NSString *title = @"No images found";
@@ -122,6 +122,7 @@
       setResponseBlock:^(DBFILESFileMetadata *result, DBFILESDownloadError *routeError, DBRequestError *error, NSData *fileData) {
         if (result) {
           UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:fileData]];
+          imageView.contentMode = UIViewContentModeScaleAspectFit;
           imageView.frame = CGRectMake(100, 100, 300, 300);
           [imageView setCenter:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)];
           [self.view addSubview:imageView];
