@@ -28,7 +28,8 @@
             [[UIApplication sharedApplication] openURL:url];
         }
                                        scopeRequest:[[DBScopeRequest alloc] initWithScopeType:DBScopeTypeUser
-                                                                                       scopes:@[@"files.metadata.read",
+                                                                                       scopes:@[@"account_info.read",
+												@"files.metadata.read",
                                                                                                 @"files.content.read"]
                                                                          includeGrantedScopes:NO]];
 }
