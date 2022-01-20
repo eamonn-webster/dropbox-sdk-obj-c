@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13D0157BCC0383D9455F4DA6 /* libPods-DBRoulette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 705CA67E1713FF9EA64A85AB /* libPods-DBRoulette.a */; };
+		DFE65CB039F0738BBD396212 /* libPods-DBRoulette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7ABAC251ED843EB0182D5D /* libPods-DBRoulette.a */; };
 		F272AD0D1D7E915C00E9727D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F272AD0C1D7E915C00E9727D /* main.m */; };
 		F272AD101D7E915C00E9727D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F272AD0F1D7E915C00E9727D /* AppDelegate.m */; };
 		F272AD131D7E915C00E9727D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F272AD121D7E915C00E9727D /* ViewController.m */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		24976BC35CFC94B817796B39 /* Pods-DBRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBRoulette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DBRoulette/Pods-DBRoulette.debug.xcconfig"; sourceTree = "<group>"; };
 		59E3D8EAB25C901FE36484EF /* Pods-DBRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBRoulette.release.xcconfig"; path = "Pods/Target Support Files/Pods-DBRoulette/Pods-DBRoulette.release.xcconfig"; sourceTree = "<group>"; };
-		705CA67E1713FF9EA64A85AB /* libPods-DBRoulette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DBRoulette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7ABAC251ED843EB0182D5D /* libPods-DBRoulette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DBRoulette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F272AD081D7E915C00E9727D /* DBRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F272AD0C1D7E915C00E9727D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F272AD0E1D7E915C00E9727D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13D0157BCC0383D9455F4DA6 /* libPods-DBRoulette.a in Frameworks */,
+				DFE65CB039F0738BBD396212 /* libPods-DBRoulette.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 		D1972C5F74381F057BD9EE7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				705CA67E1713FF9EA64A85AB /* libPods-DBRoulette.a */,
+				6A7ABAC251ED843EB0182D5D /* libPods-DBRoulette.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,19 +135,21 @@
 		F272AD001D7E915C00E9727D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = Dropbox;
 				TargetAttributes = {
 					F272AD071D7E915C00E9727D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = JW2GYJ22DF;
 					};
 				};
 			};
 			buildConfigurationList = F272AD031D7E915C00E9727D /* Build configuration list for PBXProject "DBRoulette" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -233,6 +235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -242,14 +245,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -274,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -286,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -295,14 +302,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -321,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,8 +344,12 @@
 			baseConfigurationReference = 24976BC35CFC94B817796B39 /* Pods-DBRoulette.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JW2GYJ22DF;
 				INFOPLIST_FILE = DBRoulette/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.DBRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,8 +360,12 @@
 			baseConfigurationReference = 59E3D8EAB25C901FE36484EF /* Pods-DBRoulette.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JW2GYJ22DF;
 				INFOPLIST_FILE = DBRoulette/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.DBRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
