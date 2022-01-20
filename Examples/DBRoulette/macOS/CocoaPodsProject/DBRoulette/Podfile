@@ -1,0 +1,4 @@
+target 'DBRoulette' do
+  platform :macos, '10.15'
+  pod 'ObjectiveDropboxOfficial'
+end
