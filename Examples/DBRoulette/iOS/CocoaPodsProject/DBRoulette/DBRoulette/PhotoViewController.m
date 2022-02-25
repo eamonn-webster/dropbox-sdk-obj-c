@@ -95,8 +95,20 @@
   }
 
   if ([imagePaths count] > 0) {
-    NSString *imagePathToDownload = imagePaths[arc4random_uniform((int)[imagePaths count])];
-    [self downloadImage:imagePathToDownload];
+      int index = arc4random_uniform((int)[imagePaths count]);
+      NSString *imagePathToDownload = imagePaths[index];
+      // NSString *documentDirectory = NSHomeDirectory();
+      NSString *documentDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)[0];
+      NSString *cachedImagePath = [documentDirectory stringByAppendingString:imagePathToDownload];
+      if ([[NSFileManager defaultManager] fileExistsAtPath:cachedImagePath isDirectory:false] ) {
+          NSLog(@"using cached image: %@", imagePathToDownload);
+          NSData *data = [[NSFileManager defaultManager] contentsAtPath:cachedImagePath];
+          [self displayImage: data];
+      }
+      else {
+          NSLog(@"downloading image: %@", imagePathToDownload);
+          [self downloadImage:imagePathToDownload cachePath: cachedImagePath];
+      }
   } else {
     NSString *title = @"No images found";
     NSString *message = @"There are currently no valid image files in the specified search path in your Dropbox. "
@@ -117,13 +129,21 @@
   return range.location != NSNotFound;
 }
 
-- (void)downloadImage:(NSString *)imagePath {
+- (void)downloadImage:(NSString *)imagePath cachePath:(NSString *)cacheImagePath {
   DBUserClient *client = [DBClientsManager authorizedClient];
   [[client.filesRoutes downloadData:imagePath]
       setResponseBlock:^(DBFILESFileMetadata *result, DBFILESDownloadError *routeError, DBRequestError *error, NSData *fileData) {
         if (result) {
-          [self validateDownloadData: fileData contentHash: result.contentHash];
+          // [self validateDownloadData: fileData contentHash: result.contentHash];
           [self displayImage: fileData];
+          NSLog(@"saving image: %@", cacheImagePath);
+          NSError* error;
+          // [fileData writeToFile:cacheImagePath atomically:YES];
+          [fileData writeToFile:cacheImagePath options:NSDataWritingAtomic error:&error];
+
+            if(error != nil) {
+                    NSLog(@"write error %@", error);
+            }
         } else {
           [self downloadRouteError: routeError error: error];
         }
@@ -168,7 +188,7 @@
 - (void)displayImage:(NSData *)fileData {
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:fileData]];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
-    imageView.frame = CGRectMake(100, 100, 300, 300);
+    imageView.frame = CGRectMake(50, 50, 400, 400);
     [imageView setCenter:CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2)];
     [self.view addSubview:imageView];
     _currentImageView = imageView;
