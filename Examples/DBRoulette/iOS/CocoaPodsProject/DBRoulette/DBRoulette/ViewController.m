@@ -25,7 +25,7 @@
                                          controller:self
                               loadingStatusDelegate:nil
                                             openURL:^(NSURL *url) {
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
                                        scopeRequest:[[DBScopeRequest alloc] initWithScopeType:DBScopeTypeUser
                                                                                        scopes:@[@"account_info.read",

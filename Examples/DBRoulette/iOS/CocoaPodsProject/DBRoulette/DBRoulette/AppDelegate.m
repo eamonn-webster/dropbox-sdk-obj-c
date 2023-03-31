@@ -30,7 +30,7 @@
   return YES;
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary *)options{
     DBOAuthCompletion completion = ^(DBOAuthResult *authResult) {
       if (authResult != nil) {
         if ([authResult isSuccess]) {
