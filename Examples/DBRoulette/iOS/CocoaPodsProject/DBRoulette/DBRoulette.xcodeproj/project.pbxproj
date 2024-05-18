@@ -119,6 +119,7 @@
 				F272AD041D7E915C00E9727D /* Sources */,
 				F272AD051D7E915C00E9727D /* Frameworks */,
 				F272AD061D7E915C00E9727D /* Resources */,
+				026A7DB074310EB52CA8EB2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +177,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		026A7DB074310EB52CA8EB2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DBRoulette/Pods-DBRoulette-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DBRoulette/Pods-DBRoulette-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DBRoulette/Pods-DBRoulette-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95FA91A542BC321FF3E24A1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
