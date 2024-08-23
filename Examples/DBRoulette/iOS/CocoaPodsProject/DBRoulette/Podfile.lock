@@ -1,5 +1,5 @@
 PODS:
-  - ObjectiveDropboxOfficial (7.3.1)
+  - ObjectiveDropboxOfficial (7.4.1)
 
 DEPENDENCIES:
   - ObjectiveDropboxOfficial
@@ -9,7 +9,7 @@ SPEC REPOS:
     - ObjectiveDropboxOfficial
 
 SPEC CHECKSUMS:
-  ObjectiveDropboxOfficial: 12fa0e80221f1cbc3a3bfd0be5c4451882d08d9f
+  ObjectiveDropboxOfficial: 8699fa65969a94f8305d8dabf9c9a8dd856ac598
 
 PODFILE CHECKSUM: 4d2f0f91f48989221c9f8ec5525875a7a6320274
 
